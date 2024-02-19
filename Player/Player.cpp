@@ -14,13 +14,17 @@ void Player::doAttack(Character *target) {
 }
 
 void Player::takeDamage(int damage) {
-    int trueDamage = damage - defense;
+     TrueDamage = damage - defense;
 
-    health-= trueDamage;
+    health-= TrueDamage;
 }
 
 void Player::levelUp() {
     level++;
+}
+
+int Player ::getTrueDamage() {
+    return TrueDamage;
 }
 
 void Player::gainExperience(int exp) {
@@ -29,4 +33,5 @@ void Player::gainExperience(int exp) {
         levelUp();
         experience = 100-experience;
     }
+
 }

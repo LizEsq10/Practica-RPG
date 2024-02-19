@@ -18,9 +18,13 @@ void Enemy::doAttack(Character *target) {
 }
 
 void Enemy::takeDamage(int damage) {
-    int trueDamage = damage - defense;
+     TrueDamage = damage - defense;
 
-    health-= trueDamage;
+    health-= TrueDamage;
+}
+
+int Enemy ::getTrueDamage() {
+    return TrueDamage;
 }
 
 int Enemy::getExperience() {

@@ -12,6 +12,7 @@ class Player: public Character {
 private:
     int level;
     int experience;
+    int TrueDamage;
 
     void levelUp();
 public:
@@ -20,6 +21,8 @@ public:
     void takeDamage(int damage) override;
 
     void gainExperience(int exp);
+
+    int getTrueDamage();
     //TODO: Implement use object
 };
 
